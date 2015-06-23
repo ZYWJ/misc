@@ -65,7 +65,8 @@ set ts=4
 set sw=4
 set expandtab
 set autoindent
-set backupdir=C:/vimbak
+set backupdir=C:/vimbak  ".~
+set directory=C:/vimbak  ".swp
 
 wincmd w
 autocmd VimEnter * wincmd w
