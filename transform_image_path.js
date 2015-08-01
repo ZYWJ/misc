@@ -58,14 +58,14 @@ function task(connection, tableName, row) {
         } 
     }
     
-    if (fs.exists(newPath, function (exists) {
+    fs.exists(newPath, function (exists) {
         // do nothing, if exists in the new path
         if (exists) return;
 
         // copy the old path to new path
         fs_e.copySync(row.picture, newPath);
         store(connection, tableName, storePath, row.id);
-    }));
+    });
 }
 
 // download from the Web
